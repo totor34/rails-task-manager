@@ -1,0 +1,16 @@
+
+
+<h1>
+  <%= @task.id %> -
+  <%= @task.name.upcase %> :
+  <%= @task.description %>
+</h1>
+
+<h4><%= link_to "Modifier", edit_task_path(@task.id) %></h4>
+<h4><%= link_to "Supprimer",
+        task_path,
+        method: :delete,
+        data: { confirm: "Etes vous certain?" }%>
+</h4>
+
+<h4><%= link_to "Retour à la liste", tasks_path %></h4>
